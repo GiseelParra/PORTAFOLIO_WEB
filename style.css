@@ -47,9 +47,27 @@ p {
 .section-title span {
     color: rgb(0, 66, 248);
 }
+.cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color:rgb(6, 162, 253);
+    background-color: transparent;
+    border: 2px solid rgb(107, 196, 255);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: 03s ease;
+    transition-property: background-color, color ;
+    font-family: 'Caveat', cursive;
+}  
+.cta:hover {
+    color: whitesmoke;
+    background-color: rgb(134, 166, 255);
+}
 /* Hero section*/
 #hero {
-    background-image: url(img/mio.png);
+    background-image: url(img/nube.png);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -109,24 +127,6 @@ p {
 }
 #hero h1:nth-child(3) span{
     animation-delay: 2.5s;
-}
-#hero .cta {
-    display: inline-block;
-    padding: 10px 30px;
-    color:rgb(6, 162, 253);
-    background-color: transparent;
-    border: 2px solid rgb(107, 196, 255);
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 30px;
-    transition: 03s ease;
-    transition-property: background-color, color ;
-    font-family: 'Caveat', cursive;
-}  
-#hero .cta:hover {
-    color: whitesmoke;
-    background-color: rgb(134, 166, 255);
 }
 /* End Hero Section*/
 /*Services Section*/
@@ -250,6 +250,7 @@ p {
     width: 100%;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     opacity: .7;
+    z-index: -1;
 }
 #projects .project-item img{
     transition: .3s ease transform;
@@ -258,6 +259,50 @@ p {
     transform: scale(1.1);
 }
 /*End Projects Section*/
+/*About Section*/ 
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left {
+    width: 250px;
+    height: 360px;
+}
+#about .col-right {
+    width: 100%;
+}
+#about .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p {
+    margin-bottom: 20px;
+}
+#about .col-right cta {
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#about .col-left .about-img{
+    position: relative;
+    border: 10px solid beige;
+}
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px blue;
+    z-index: -1;
+}
+/*End About Section*/
 /*Keyfromes*/
 @keyframes text_reveal_box{
     50% {
